@@ -1,5 +1,5 @@
 App:
-[Acessar o App](https://lucianawaka-classification-proba-app-qhd0af.streamlit.app/)
+[Acessar o App no Streamlit](https://lucianawaka-classification-proba-app-qhd0af.streamlit.app/)
 
 Datasets:  
 [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/datasets/russellyates88/suicide-rates-overview-1985-to-2016?resource=download)  
