@@ -22,10 +22,10 @@ import os
 model = joblib.load('model/classifier_v2.pkl')
 
 def main():
-    options = ['Home', 'Classificar áudio']
+    options = ['Classificar áudio', 'Sobre']
     page_options = st.sidebar.selectbox('Escolha uma opção', options)
     
-    if page_options == 'Home':
+    if page_options == 'Sobre':
         homepage()
     if page_options == 'Classificar áudio':
         classify_audio()
