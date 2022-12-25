@@ -30,11 +30,13 @@ class Audio:
             # listen for the data (load audio to memory)
             try:
                 audio_data = r.record(source)
-                # recognize (convert from speech to text)
-                text = r.recognize_google(audio_data, language='pt-BR')
-                self.text = text 
+                if audio_data.duration_seconds > 0:
+                    # recognize (convert from speech to text)
+                    text = r.recognize_google(audio_data, language='pt-BR')
+                    self.text = text 
             except FileNotFoundError:
                 st.write("Erro ao converter o áudio")
+                self.text = ""
             
     def translate_audio(self):
         translator = Translator()
