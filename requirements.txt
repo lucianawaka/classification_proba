@@ -3,5 +3,5 @@ scikit-learn==1.0.2
 matplotlib
 pandas
 audio-recorder-streamlit
-SpeechRecognition
+SpeechRecognition==3.9.0
 googletrans==4.0.0rc1
