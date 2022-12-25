@@ -31,8 +31,14 @@ class Audio:
             try:
                 audio_data = r.record(source)
                 # recognize (convert from speech to text)
-                text = r.recognize_google(audio_data, language='pt-BR')
-                self.text = text 
+                try:
+                    text = r.recognize_google(audio_data, language='pt-BR')
+                    self.text = text 
+                except sr.UnknownValueError:
+                    st.write("Não pode entender o áudio")
+                except sr.RequestError as e:
+                    st.write("Erro: {0}".format(e))
+                
             except FileNotFoundError:
                 st.write("Erro ao converter o áudio")
                 self.text = ""
