@@ -44,8 +44,13 @@ class Audio:
                 self.text = ""
             
     def translate_audio(self):
-        translator = Translator()
-        translation = translator.translate(self.text, dest='en')
-        return translation.text  
+        try:
+            translator = Translator()
+            translation = translator.translate(self.text, dest='en')
+            return translation.text
+        except translation.error:
+            st.write("Erro ao traduzir o áudio")
+            return ""
+          
 
 
