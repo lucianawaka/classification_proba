@@ -48,7 +48,7 @@ class Audio:
             translator = Translator()
             translation = translator.translate(self.text, dest='en')
             return translation.text
-        except translation.error:
+        except Exception:
             st.write("Erro ao traduzir o áudio")
             return ""
           
